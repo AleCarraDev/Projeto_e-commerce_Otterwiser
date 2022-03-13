@@ -106,7 +106,7 @@ export default function HomePage() {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Carrinho</DrawerHeader>
+            <DrawerHeader>Compras</DrawerHeader>
 
             {Carrinho.length !== 0 ? (
               <DrawerBody>
