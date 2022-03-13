@@ -21,6 +21,11 @@ $ yarn
 # Para iniciar o projeto:
 $ yarn start
 ```
+# Fotos do projeto
+![Captura de tela de 2022-03-13 19-50-03](https://user-images.githubusercontent.com/88162484/158082779-5d08205d-cfdf-449c-a5cd-909f31f77531.png)
+![Captura de tela de 2022-03-13 19-50-27](https://user-images.githubusercontent.com/88162484/158082781-5eb7d515-4fc4-43a9-8552-dd8b4d289b04.png)
+![Captura de tela de 2022-03-13 19-50-40](https://user-images.githubusercontent.com/88162484/158082783-224c6424-0ba4-4c35-8766-1497fb9e2416.png)
+![Captura de tela de 2022-03-13 19-50-59](https://user-images.githubusercontent.com/88162484/158082784-3a4b0617-c315-460a-a2a9-8476913d5c9e.png)
 
 # Getting Started with Create React App
 
