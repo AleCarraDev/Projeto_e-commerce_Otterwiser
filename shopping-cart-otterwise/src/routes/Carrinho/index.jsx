@@ -11,15 +11,15 @@ import {
   Center,
   Button,
   useDisclosure,
-} from "@chakra-ui/react";
-import ShoppingCartTable from "./components/ShoppingCartTable";
-import * as CarrinhoService from "src/services/carrinho";
-import * as ProdutoService from "src/services/produtos";
-import { useCarrinho } from "src/context/carrinho-context";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { MdNavigateBefore, MdOutlineDone, MdAttachMoney } from "react-icons/md";
-import { numberToBRL } from "src/helpers/Format";
+} from '@chakra-ui/react';
+import ShoppingCartTable from './components/ShoppingCartTable';
+import * as CarrinhoService from 'src/services/carrinho';
+import * as ProdutoService from 'src/services/produtos';
+import { useCarrinho } from 'src/context/carrinho-context';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { MdNavigateBefore, MdOutlineDone, MdAttachMoney } from 'react-icons/md';
+import { numberToBRL } from 'src/helpers/Format';
 
 export default function Carrinho() {
   const { carrinho, dispatch } = useCarrinho();
@@ -28,7 +28,7 @@ export default function Carrinho() {
 
   useEffect(() => {
     dispatch({
-      type: "LOAD",
+      type: 'LOAD',
       carrinho: CarrinhoService.getCarrinho().map(({ uuid, amount }) => {
         const produto = ProdutoService.getProdutoByUUID(uuid);
 
@@ -49,7 +49,7 @@ export default function Carrinho() {
           <Button
             leftIcon={<MdNavigateBefore />}
             colorScheme="blue"
-            onClick={() => navigate("/")}
+            onClick={() => navigate('/')}
           >
             Voltar as compras
           </Button>
@@ -72,7 +72,7 @@ export default function Carrinho() {
               <Icon as={MdAttachMoney} boxSize={48} color="green.300" />
               <Text>Compra Finalizada!</Text>
               <Text>
-                Total:{" "}
+                Total:{' '}
                 {numberToBRL(
                   carrinho.reduce((previous, { total }) => previous + total, 0)
                 )}
@@ -86,7 +86,7 @@ export default function Carrinho() {
               onClick={() => {
                 CarrinhoService.setCarrinho([]);
                 onClose();
-                navigate("/");
+                navigate('/');
               }}
             >
               Concluir

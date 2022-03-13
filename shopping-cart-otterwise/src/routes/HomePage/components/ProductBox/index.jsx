@@ -8,9 +8,9 @@ import {
   Stack,
   Text,
   useNumberInput,
-} from "@chakra-ui/react";
-import { MdAddShoppingCart } from "react-icons/md";
-import { numberToBRL } from "src/helpers/Format";
+} from '@chakra-ui/react';
+import { MdAddShoppingCart } from 'react-icons/md';
+import { numberToBRL } from 'src/helpers/Format';
 
 export default function ProductBox(props) {
   const {
@@ -26,10 +26,10 @@ export default function ProductBox(props) {
 
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } =
     useNumberInput({
-      step: unit === "kg" ? 0.1 : 1,
+      step: unit === 'kg' ? 0.1 : 1,
       defaultValue: 1,
-      min: unit === "kg" ? 0.1 : 1,
-      precision: unit === "kg" ? 3 : 0,
+      min: unit === 'kg' ? 0.1 : 1,
+      precision: unit === 'kg' ? 3 : 0,
     });
   const inc = getIncrementButtonProps();
   const dec = getDecrementButtonProps();

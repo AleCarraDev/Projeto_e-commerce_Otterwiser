@@ -7,12 +7,12 @@ import {
   HStack,
   Input,
   Button,
-} from "@chakra-ui/react";
-import { MdRemoveShoppingCart } from "react-icons/md";
-import { numberToBRL } from "src/helpers/Format";
-import * as CarrinhoService from "src/services/carrinho";
-import { useCarrinho } from "src/context/carrinho-context";
-import { useEffect } from "react";
+} from '@chakra-ui/react';
+import { MdRemoveShoppingCart } from 'react-icons/md';
+import { numberToBRL } from 'src/helpers/Format';
+import * as CarrinhoService from 'src/services/carrinho';
+import { useCarrinho } from 'src/context/carrinho-context';
+import { useEffect } from 'react';
 
 export default function ShoppingCartRowTable(props) {
   const { product } = props;
@@ -34,19 +34,19 @@ export default function ShoppingCartRowTable(props) {
     getIncrementButtonProps,
     getDecrementButtonProps,
   } = useNumberInput({
-    step: unit === "kg" ? 0.1 : 1,
+    step: unit === 'kg' ? 0.1 : 1,
     defaultValue: amount,
-    min: unit === "kg" ? 0.1 : 1,
-    precision: unit === "kg" ? 3 : 0,
+    min: unit === 'kg' ? 0.1 : 1,
+    precision: unit === 'kg' ? 3 : 0,
   });
 
   const inc = getIncrementButtonProps();
   const dec = getDecrementButtonProps();
   const input = getInputProps({ isReadOnly: true });
 
-  const handleDeleteOnClick = (uuid) => {
+  const handleDeleteOnClick = uuid => {
     dispatch({
-      type: "REMOVE",
+      type: 'REMOVE',
       uuid: uuid,
     });
     CarrinhoService.removeProduto(uuid);
@@ -54,7 +54,7 @@ export default function ShoppingCartRowTable(props) {
 
   useEffect(() => {
     dispatch({
-      type: "UPDATE",
+      type: 'UPDATE',
       produto: {
         ...product,
         amount: valueAsNumber,

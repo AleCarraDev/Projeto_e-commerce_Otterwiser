@@ -75,7 +75,7 @@ export default function HomePage() {
           fontWeight={900}
           fontSize="2rem"
         >
-          {"Shopping Cart"}
+          {"Hero Fruit"}
         </Text>
       </Flex>
       <Flex

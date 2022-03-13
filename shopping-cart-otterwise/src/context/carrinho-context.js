@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from 'react';
 
 const CarrinhoContext = createContext(null);
 
@@ -16,15 +16,15 @@ export const useCarrinho = () => useContext(CarrinhoContext);
 
 const carrinhoReducer = (carrinho, action) => {
   switch (action.type) {
-    case "ADD":
+    case 'ADD':
       return [...carrinho, action.produto];
-    case "LOAD":
+    case 'LOAD':
       return [...action.carrinho];
-    case "UPDATE":
-      return carrinho.map((produto) =>
+    case 'UPDATE':
+      return carrinho.map(produto =>
         produto.uuid === action.produto.uuid ? action.produto : produto
       );
-    case "REMOVE":
+    case 'REMOVE':
       return carrinho.filter(({ uuid }) => uuid !== action.uuid);
     default:
       return carrinho;

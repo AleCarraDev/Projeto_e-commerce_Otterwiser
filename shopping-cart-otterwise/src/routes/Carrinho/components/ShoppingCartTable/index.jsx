@@ -1,7 +1,7 @@
-import { Table, Tbody, Tfoot, Th, Thead, Tr } from "@chakra-ui/react";
-import { useCarrinho } from "src/context/carrinho-context";
-import { numberToBRL } from "src/helpers/Format";
-import ShoppingCartRowTable from "../ShoppingCartRowTable";
+import { Table, Tbody, Tfoot, Th, Thead, Tr } from '@chakra-ui/react';
+import { useCarrinho } from 'src/context/carrinho-context';
+import { numberToBRL } from 'src/helpers/Format';
+import ShoppingCartRowTable from '../ShoppingCartRowTable';
 
 export default function ShoppingCartTable() {
   const { carrinho } = useCarrinho();
@@ -20,7 +20,7 @@ export default function ShoppingCartTable() {
       </Thead>
       <Tbody>
         {!!carrinho &&
-          carrinho.map((product) => (
+          carrinho.map(product => (
             <ShoppingCartRowTable product={product} key={product.uuid} />
           ))}
       </Tbody>
